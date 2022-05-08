@@ -9,6 +9,6 @@ cd nginx/ && docker build -t nginx:bf .
 
 cd ..
 
-docker compose up -d
+docker-compose up -d
 
 docker ps
