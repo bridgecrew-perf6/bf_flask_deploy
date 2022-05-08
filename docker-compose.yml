@@ -1,0 +1,22 @@
+version: '3'
+services:
+  flask:
+      restart: always
+      container_name: flask
+      image: "flask:bf"
+      ports:
+       - "5001:5001"
+      networks:
+      - backend
+  nginx:
+      restart: always
+      container_name: nginx
+      image: "nginx:bf"
+      ports:
+       - "80:80"
+      networks:
+       - backend
+
+networks:
+  backend:
+    driver: bridge
