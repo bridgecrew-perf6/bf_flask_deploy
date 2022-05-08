@@ -9,4 +9,3 @@ def calc():
 @app.route('/brew')
 def brew():
     return render_template("brew.html")
-
